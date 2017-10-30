@@ -29,10 +29,11 @@
     <color name="font_black_0">#212121</color>
     <color name="font_black_1">#424242</color>
     <color name="font_black_2">#616161</color>
-    <color name="font_black_3">#757575</color>
+    <color name="font_black_3">#f0f0f0</color>
     <color name="font_black_4">#9e9e9e</color>
     <color name="font_black_5">#bdbdbd</color>
     <color name="font_black_6">#e0e0e0</color>
+    <color name="font_orage">#ff9a26</color>
 
     <!-- divider -->
     <color name="divider_1">#e2e2e2</color>
@@ -43,4 +44,5 @@
     <color name="cl_snappingstepper_button_press">#1f567b</color>
     <color name="cl_snappingstepper_text_bg">#fff</color>
     <color name="cl_snappingstepper_text">#6798e7</color>
+
 </resources>

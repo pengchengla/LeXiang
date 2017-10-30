@@ -1,17 +1,19 @@
 package www.lexiang.com.lexiang;
-
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-
 import www.lexiang.com.lexiang.Fragment.FindFragment;
 import www.lexiang.com.lexiang.Fragment.HomeFragment;
 import www.lexiang.com.lexiang.Fragment.MessageFragment;
@@ -19,9 +21,7 @@ import www.lexiang.com.lexiang.Fragment.MineFragment;
 /*
   zhuye
  */
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
     private FrameLayout fl;
     private RadioButton rb_home;
     private RadioButton rb_find;
@@ -35,13 +35,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private MessageFragment messageFragment;
     private MineFragment mineFragment;
     private ImageView frag_add;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        addFragments(new HomeFragment());
+//        UltimateBar ultimateBar =new UltimateBar(this);
+//        ultimateBar.setColorBar(ContextCompat.getColor(this,R.color.black));
+        homeFragment=new HomeFragment();
+        addFragments(homeFragment);
         initView();
     }
 
@@ -54,37 +55,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rgp = (RadioGroup) findViewById(R.id.rgp);
         activity_main = (LinearLayout) findViewById(R.id.activity_main);
         frag_add = (ImageView) findViewById(R.id.frag_add);
+        rb_home.setOnClickListener(this);
+        rb_find.setOnClickListener(this);
+        rb_message.setOnClickListener(this);
+        rb_mine.setOnClickListener(this);
+
     }
+        private void addFragments(Fragment f) {
+            // 第一步：得到fragment管理类
+            FragmentManager manager = getSupportFragmentManager();
+            // 第二步：开启一个事务
+            FragmentTransaction transaction = manager.beginTransaction();
 
-    private void addFragments(Fragment f) {
-        // 第一步：得到fragment管理类
-        FragmentManager manager = getSupportFragmentManager();
-        // 第二步：开启一个事务
-        FragmentTransaction transaction = manager.beginTransaction();
-
-        if (currentf != null) {
-            //每次把前一个fragment给隐藏了
-            transaction.hide(currentf);
+            if (currentf != null) {
+                //每次把前一个fragment给隐藏了
+                transaction.hide(currentf);
+            }
+            //isAdded:判断当前的fragment对象是否被加载过
+            if (!f.isAdded()) {
+                // 第三步：调用添加fragment的方法 第一个参数：容器的id 第二个参数：要放置的fragment的一个实例对象
+                transaction.add(R.id.fl, f);
+            }
+            //显示当前的fragment
+            transaction.show(f);
+            // 第四步：提交
+            transaction.commit();
+            currentf = f;
         }
-
-        //isAdded:判断当前的fragment对象是否被加载过
-        if (!f.isAdded()) {
-            // 第三步：调用添加fragment的方法 第一个参数：容器的id 第二个参数：要放置的fragment的一个实例对象
-            transaction.add(R.id.fl, f);
-        }
-        //显示当前的fragment
-        transaction.show(f);
-
-        // 第四步：提交
-        transaction.commit();
-
-        currentf = f;
-    }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id. rb_home:
+            case R.id.rb_home:
                 if(homeFragment==null){
                    homeFragment=new HomeFragment();
 
@@ -115,6 +117,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
+
 }
 
 
