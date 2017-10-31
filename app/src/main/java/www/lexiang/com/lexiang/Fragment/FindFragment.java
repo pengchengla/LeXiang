@@ -1,20 +1,11 @@
 package www.lexiang.com.lexiang.Fragment;
 
-import android.content.res.Resources;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TableLayout;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Field;
 
 import www.lexiang.com.lexiang.Fragment.fragment.BianminFragment;
 import www.lexiang.com.lexiang.Fragment.fragment.BlockFragment;
@@ -36,7 +27,7 @@ public class FindFragment extends BaseFragment implements View.OnClickListener {
     private TextView text_person;
     private TextView text_phone;
     private TextView text_town;
-    private View v1,v2,v3,v4,v5;
+    private View v1, v2, v3, v4, v5;
     private Fragment currentf;
     private BianminFragment bianminFragment;
     private BlockFragment blockFragment;
@@ -60,7 +51,7 @@ public class FindFragment extends BaseFragment implements View.OnClickListener {
         text_town = (TextView) view.findViewById(R.id.text_town);
         find_img = (ImageView) view.findViewById(R.id.find_img);
         v1 = view.findViewById(R.id.v1);
-        v2= view.findViewById(R.id.v2);
+        v2 = view.findViewById(R.id.v2);
         v3 = view.findViewById(R.id.v3);
         v4 = view.findViewById(R.id.v4);
         v5 = view.findViewById(R.id.v5);
@@ -69,21 +60,22 @@ public class FindFragment extends BaseFragment implements View.OnClickListener {
         text_person.setOnClickListener(this);
         text_phone.setOnClickListener(this);
         text_town.setOnClickListener(this);
-        lifeFragment=new LifeFragment();
+        lifeFragment = new LifeFragment();
         addFragments(lifeFragment);
 
         return view;
     }
+
     private void inindata() {
 
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.text_life:
-                if(lifeFragment==null){
-                    lifeFragment=new LifeFragment();
+                if (lifeFragment == null) {
+                    lifeFragment = new LifeFragment();
                 }
                 addFragments(lifeFragment);
                 v1.setVisibility(View.VISIBLE);
@@ -94,8 +86,8 @@ public class FindFragment extends BaseFragment implements View.OnClickListener {
                 find_img.setImageResource(R.drawable.findimg1);
                 break;
             case R.id.text_block:
-                if(blockFragment==null){
-                    blockFragment=new BlockFragment();
+                if (blockFragment == null) {
+                    blockFragment = new BlockFragment();
 
                 }
                 addFragments(blockFragment);
@@ -107,8 +99,8 @@ public class FindFragment extends BaseFragment implements View.OnClickListener {
                 find_img.setImageResource(R.drawable.home_body);
                 break;
             case R.id.text_phone:
-                if(phoneFragment==null){
-                    phoneFragment=new PhoneFragment();
+                if (phoneFragment == null) {
+                    phoneFragment = new PhoneFragment();
 
                 }
                 addFragments(phoneFragment);
@@ -120,8 +112,8 @@ public class FindFragment extends BaseFragment implements View.OnClickListener {
                 find_img.setImageResource(R.drawable.home_body2);
                 break;
             case R.id.text_person:
-                if(bianminFragment==null){
-                    bianminFragment=new BianminFragment();
+                if (bianminFragment == null) {
+                    bianminFragment = new BianminFragment();
 
 
                 }
@@ -134,8 +126,8 @@ public class FindFragment extends BaseFragment implements View.OnClickListener {
                 find_img.setImageResource(R.drawable.home_body4);
                 break;
             case R.id.text_town:
-                if(shizhengFragment==null){
-                     shizhengFragment=new ShizhengFragment();
+                if (shizhengFragment == null) {
+                    shizhengFragment = new ShizhengFragment();
                 }
                 addFragments(shizhengFragment);
                 v4.setVisibility(View.VISIBLE);
@@ -148,6 +140,7 @@ public class FindFragment extends BaseFragment implements View.OnClickListener {
 
         }
     }
+
     private void addFragments(Fragment f) {
         // 第一步：得到fragment管理类
         FragmentManager manager = getChildFragmentManager();

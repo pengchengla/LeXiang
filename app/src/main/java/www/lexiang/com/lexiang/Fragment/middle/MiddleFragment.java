@@ -1,4 +1,4 @@
-package www.lexiang.com.lexiang.Fragment;
+package www.lexiang.com.lexiang.Fragment.middle;
 
 import android.view.View;
 
@@ -10,7 +10,7 @@ import www.lexiang.com.lexiang.base.BaseFragment;
  * author:衣鹏宇(ypu)
  */
 
-public class MineFragment extends BaseFragment {
+public class MiddleFragment extends BaseFragment {
     @Override
     protected void lazyLoad() {
 
@@ -18,7 +18,7 @@ public class MineFragment extends BaseFragment {
 
     @Override
     protected View initView() {
-       View view=View.inflate(mContext, R.layout.fragment_mine,null);
+       View view=View.inflate(mContext, R.layout.fragment_middle,null);
         return view;
     }
 }

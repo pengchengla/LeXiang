@@ -1,4 +1,4 @@
-package www.lexiang.com.lexiang.Fragment;
+package www.lexiang.com.lexiang.Fragment.mine;
 
 import android.view.View;
 
@@ -10,18 +10,15 @@ import www.lexiang.com.lexiang.base.BaseFragment;
  * author:衣鹏宇(ypu)
  */
 
-public class MessageFragment extends BaseFragment {
+public class MineFragment extends BaseFragment {
     @Override
     protected void lazyLoad() {
-        /*
-          加载数据
-         */
 
     }
 
     @Override
     protected View initView() {
-        View view=View.inflate(mContext, R.layout.fragment_message,null);
+       View view=View.inflate(mContext, R.layout.fragment_mine,null);
         return view;
     }
 }
