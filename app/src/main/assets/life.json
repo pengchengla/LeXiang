@@ -1,0 +1,46 @@
+[
+  {
+    "title":"求职招聘",
+    "cellArray":
+    [
+      {
+        "cellTitle":"求职"
+      },
+      {
+        "cellTitle":"招聘"
+      }]
+  },
+  {
+    "title":"房屋出租",
+    "cellArray":
+    [
+      {
+        "cellTitle":"出租"
+      },
+      {
+        "cellTitle":"出售"
+      },{
+      "cellTitle":"求组"}
+    ]
+  }, {
+  "title":"二手淘淘",
+  "cellArray":
+  [
+    {
+      "cellTitle":"求购"
+    },
+    {
+      "cellTitle":"出售"
+    },{
+    "cellTitle":"义乌市场"}
+  ]
+}
+
+
+
+
+
+
+
+
+]

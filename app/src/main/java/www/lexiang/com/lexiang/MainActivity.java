@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rb_find.setOnClickListener(this);
         rb_message.setOnClickListener(this);
         rb_mine.setOnClickListener(this);
+        frag_add.setOnClickListener(this);
 
     }
         private void addFragments(Fragment f) {
@@ -114,6 +115,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     mineFragment=new MineFragment();
                 }
                 addFragments(mineFragment);
+                break;
+            case R.id.frag_add:
+                //加号
+
                 break;
         }
     }
