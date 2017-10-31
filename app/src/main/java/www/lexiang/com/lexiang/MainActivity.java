@@ -10,10 +10,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
 import www.lexiang.com.lexiang.Fragment.FindFragment;
 import www.lexiang.com.lexiang.Fragment.HomeFragment;
 import www.lexiang.com.lexiang.Fragment.message.MessageFragment;
-import www.lexiang.com.lexiang.Fragment.middle.MiddleFragment;
 import www.lexiang.com.lexiang.Fragment.mine.MineFragment;
 /*
   zhuye
@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FindFragment findFragment;
     private MessageFragment messageFragment;
     private MineFragment mineFragment;
-    private MiddleFragment mMiddleFragment;
     private ImageView frag_add;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,10 +115,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.frag_add:
                 //加号
-                if(mMiddleFragment==null){
-                    mMiddleFragment=new MiddleFragment();
-                }
-                addFragments(mMiddleFragment);
                 break;
         }
     }
