@@ -1,4 +1,5 @@
 package www.lexiang.com.lexiang;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,6 +16,7 @@ import www.lexiang.com.lexiang.Fragment.FindFragment;
 import www.lexiang.com.lexiang.Fragment.HomeFragment;
 import www.lexiang.com.lexiang.Fragment.message.MessageFragment;
 import www.lexiang.com.lexiang.Fragment.mine.MineFragment;
+
 /*
   zhuye
  */
@@ -32,13 +34,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private MessageFragment messageFragment;
     private MineFragment mineFragment;
     private ImageView frag_add;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        UltimateBar ultimateBar =new UltimateBar(this);
-//        ultimateBar.setColorBar(ContextCompat.getColor(this,R.color.black));
-        homeFragment=new HomeFragment();
+        //        UltimateBar ultimateBar =new UltimateBar(this);
+        //        ultimateBar.setColorBar(ContextCompat.getColor(this,R.color.black));
+        homeFragment = new HomeFragment();
         addFragments(homeFragment);
         initView();
     }
@@ -59,57 +62,56 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         frag_add.setOnClickListener(this);
 
     }
-        private void addFragments(Fragment f) {
-            // 第一步：得到fragment管理类
-            FragmentManager manager = getSupportFragmentManager();
-            // 第二步：开启一个事务
-            FragmentTransaction transaction = manager.beginTransaction();
 
-            if (currentf != null) {
-                //每次把前一个fragment给隐藏了
-                transaction.hide(currentf);
-            }
-            //isAdded:判断当前的fragment对象是否被加载过
-            if (!f.isAdded()) {
-                // 第三步：调用添加fragment的方法 第一个参数：容器的id 第二个参数：要放置的fragment的一个实例对象
-                transaction.add(R.id.fl, f);
-            }
-            //显示当前的fragment
-            transaction.show(f);
-            // 第四步：提交
-            transaction.commit();
-            currentf = f;
+    private void addFragments(Fragment f) {
+        // 第一步：得到fragment管理类
+        FragmentManager manager = getSupportFragmentManager();
+        // 第二步：开启一个事务
+        FragmentTransaction transaction = manager.beginTransaction();
+
+        if (currentf != null) {
+            //每次把前一个fragment给隐藏了
+            transaction.hide(currentf);
         }
+        //isAdded:判断当前的fragment对象是否被加载过
+        if (!f.isAdded()) {
+            // 第三步：调用添加fragment的方法 第一个参数：容器的id 第二个参数：要放置的fragment的一个实例对象
+            transaction.add(R.id.fl, f);
+        }
+        //显示当前的fragment
+        transaction.show(f);
+        // 第四步：提交
+        transaction.commit();
+        currentf = f;
+    }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.rb_home:
-                if(homeFragment==null){
-                   homeFragment=new HomeFragment();
+                if (homeFragment == null) {
+                    homeFragment = new HomeFragment();
 
                 }
                 addFragments(homeFragment);
                 break;
             case R.id.rb_find:
-
-                if(findFragment==null){
-
-                    findFragment=new FindFragment();
+                if (findFragment == null) {
+                    findFragment = new FindFragment();
                 }
                 addFragments(findFragment);
                 break;
             case R.id.rb_message:
-                if(messageFragment==null){
-                    messageFragment=new MessageFragment();
+                if (messageFragment == null) {
+                    messageFragment = new MessageFragment();
 
                 }
                 addFragments(messageFragment);
 
                 break;
-            case R.id.rb_mine :
-                if(mineFragment==null){
-                    mineFragment=new MineFragment();
+            case R.id.rb_mine:
+                if (mineFragment == null) {
+                    mineFragment = new MineFragment();
                 }
                 addFragments(mineFragment);
                 break;
