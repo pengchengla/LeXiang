@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
         android:orientation="vertical"
     >
         <LinearLayout
@@ -17,12 +17,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:id="@+id/iv_setting"
+                    android:id="@+id/iv_back"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
                     android:padding="10dp"
-                    android:src="@drawable/icon_setting"/>
+                    android:src="@drawable/callback"/>
             </RelativeLayout>
             <www.lexiang.com.lexiang.view.CircleImageView
                 android:id="@+id/iv_head"
@@ -110,214 +109,213 @@
                 android:layout_marginBottom="10dp"
                 android:text="风决定要走，云怎么挽留"
                 android:textColor="@color/white"/>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="15dp">
-                <TextView
-                    android:id="@+id/tv_ziliao"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/shape_button"
-                    android:padding="10dp"
-                    android:text="个人资料"
-                    android:textColor="@color/white"/>
-                <TextView
-                    android:id="@+id/tv_gojifen"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/shape_button"
-                    android:padding="10dp"
-                    android:text="签到送积分"
-                    android:textColor="@color/white"/>
-            </LinearLayout>
         </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-        >
-            <LinearLayout
-                android:id="@+id/ll_edit"
-                android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_qwsj"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-            >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_edit"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="center"
-                    android:text="动态"
-                    android:textColor="@color/textblack"
-                    android:textSize="15sp"/>
-            </LinearLayout>
+                android:drawableLeft="@drawable/qwsj"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="趣玩社交"
+                android:textColor="@color/textblack"
+                android:textSize="15sp"/>
             <LinearLayout
-                android:id="@+id/ll_collect"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="true"
-            >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_collect"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="center"
-                    android:text="收藏"
-                    android:textColor="@color/textblack"
-                    android:textSize="15sp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/ll_shop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_centerVertical="true">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_shop"/>
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="center"
-                    android:text="商家"
-                    android:textColor="@color/textblack"
-                    android:textSize="15sp"/>
+                    android:text="发布文章  :"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="6"/>
             </LinearLayout>
         </RelativeLayout>
         <View
             android:layout_width="match_parent"
-            android:layout_height="5dp"
+            android:layout_height="1dp"
             android:background="@color/huise"></View>
-        <TextView
-            android:id="@+id/tv_weather"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/weather"
-            android:drawablePadding="10dp"
-            android:padding="10dp"
-            android:text="天气预报"
-            android:textColor="@color/textblack"
-            android:textSize="15sp"/>
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_locallife"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/locallife"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="本地生活"
+                android:textColor="@color/textblack"
+                android:textSize="15sp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布文章  :"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="6"/>
+            </LinearLayout>
+        </RelativeLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/huise"></View>
-        <TextView
-            android:id="@+id/tv_kuaidi"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/kuaidi"
-            android:drawablePadding="10dp"
-            android:padding="10dp"
-            android:text="快递查询"
-            android:textColor="@color/textblack"
-            android:textSize="15sp"/>
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_dajiabang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/dajiabang"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="大家帮"
+                android:textColor="@color/textblack"
+                android:textSize="15sp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布文章  :"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="6"/>
+            </LinearLayout>
+        </RelativeLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/huise"></View>
-        <TextView
-            android:id="@+id/tv_weizhang"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/weizhang"
-            android:drawablePadding="10dp"
-            android:padding="10dp"
-            android:text="违章查询"
-            android:textColor="@color/textblack"
-            android:textSize="15sp"/>
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_bianminfuwu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/bianminfuwu"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="便民服务"
+                android:textColor="@color/textblack"
+                android:textSize="15sp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布文章  :"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="6"/>
+            </LinearLayout>
+        </RelativeLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/huise"></View>
-        <TextView
-            android:id="@+id/tv_heimingdan"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/hmd"
-            android:drawablePadding="10dp"
-            android:padding="10dp"
-            android:text="黑名单"
-            android:textColor="@color/textblack"
-            android:textSize="15sp"/>
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_tongcheng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/tongchegn"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="玩转同城"
+                android:textColor="@color/textblack"
+                android:textSize="15sp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布文章  :"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="6"/>
+            </LinearLayout>
+        </RelativeLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/huise"></View>
-        <TextView
-            android:id="@+id/tv_myjifen"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/jifen"
-            android:drawablePadding="10dp"
-            android:padding="10dp"
-            android:text="我的积分"
-            android:textColor="@color/textblack"
-            android:textSize="15sp"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/huise"></View>
-        <TextView
-            android:id="@+id/tv_myfuwu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/fuwu"
-            android:drawablePadding="10dp"
-            android:padding="10dp"
-            android:text="我的服务"
-            android:textColor="@color/textblack"
-            android:textSize="15sp"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/huise"></View>
-        <TextView
-            android:id="@+id/tv_zhinan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/zn"
-            android:drawablePadding="10dp"
-            android:padding="10dp"
-            android:text="使用指南"
-            android:textColor="@color/textblack"
-            android:textSize="15sp"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/huise"></View>
-        <TextView
-            android:id="@+id/tv_shareapp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/fx"
-            android:drawablePadding="10dp"
-            android:padding="10dp"
-            android:text="分享应用"
-            android:textColor="@color/textblack"
-            android:textSize="15sp"/>
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_tancheng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/tanchegn"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="探城"
+                android:textColor="@color/textblack"
+                android:textSize="15sp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布文章  :"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="6"/>
+            </LinearLayout>
+        </RelativeLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"

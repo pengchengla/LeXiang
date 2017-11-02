@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="www.lexiang.com.lexiang">
+<manifest package="www.lexiang.com.lexiang"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -10,14 +10,18 @@
         android:theme="@style/AppTheme">
         <activity android:name=".avtivity.LoginActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".avtivity.ForgetpwdActivity"></activity>//修改密码
-        <activity android:name=".avtivity.fragment.AffirmpwdActivity"></activity>//完成修改
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".avtivity.ForgetpwdActivity"/>
+        //修改密码
+        <activity android:name=".avtivity.fragment.AffirmpwdActivity"/>
+        //完成修改
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Fragment.mine.MyDongTaiActivity">
+        </activity>
     </application>
 
 </manifest>

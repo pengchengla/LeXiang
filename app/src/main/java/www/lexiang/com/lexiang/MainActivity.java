@@ -104,10 +104,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.rb_message:
                 if (messageFragment == null) {
                     messageFragment = new MessageFragment();
-
                 }
                 addFragments(messageFragment);
-
                 break;
             case R.id.rb_mine:
                 if (mineFragment == null) {
