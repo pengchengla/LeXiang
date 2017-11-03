@@ -101,6 +101,8 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 startActivity(intent);
                 break;
             case R.id.ll_collect:
+                Intent intent4=new Intent(mContext,MyCollectActivity.class);
+                startActivity(intent4);
                 break;
             case R.id.ll_shop:
                 break;

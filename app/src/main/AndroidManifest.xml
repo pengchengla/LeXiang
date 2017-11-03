@@ -34,6 +34,8 @@
         </activity>
         <activity android:name=".Fragment.mine.ModifyPswActivity">
         </activity>
+        <activity android:name=".Fragment.mine.MyCollectActivity">
+        </activity>
     </application>
 
 </manifest>

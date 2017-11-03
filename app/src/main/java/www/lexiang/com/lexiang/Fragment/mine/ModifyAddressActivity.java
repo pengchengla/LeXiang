@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import www.lexiang.com.lexiang.R;
+import www.lexiang.com.lexiang.utils.provice.AddressUtils;
 
 public class ModifyAddressActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -57,7 +58,12 @@ public class ModifyAddressActivity extends AppCompatActivity implements View.OnC
                 submit();
                 break;
             case R.id.tv_address:
+                showAddressDialog();
                 break;
         }
+    }
+
+    private void showAddressDialog() {
+        new AddressUtils().ShowAddressDialog(this, tv_address);
     }
 }
