@@ -24,6 +24,16 @@
         </activity>
         <activity android:name=".Fragment.mine.BlackNameActivity">
         </activity>
+        <activity android:name=".Fragment.mine.MyZiLiaoActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.ModifyNameActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.PersonIntroActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.ModifyAddressActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.ModifyPswActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -21,6 +21,8 @@ public class BlackNameActivity extends AppCompatActivity {
 
     private ImageView iv_back;
     private RecyclerView recycler_black;
+    private List<String> mList;
+    private BlackAdapter mBlackAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +41,12 @@ public class BlackNameActivity extends AppCompatActivity {
         });
         recycler_black = (RecyclerView) findViewById(R.id.recycler_black);
         recycler_black.setLayoutManager(new LinearLayoutManager(this));
-        List<String> list=new ArrayList<>();
-        list.add("");
-        list.add("");
-        list.add("");
-        BlackAdapter blackAdapter = new BlackAdapter(R.layout.item_black,list);
-        recycler_black.setAdapter(blackAdapter);
+        mList = new ArrayList<>();
+        mList.add("");
+        mList.add("");
+        mList.add("");
+        mBlackAdapter = new BlackAdapter(R.layout.item_black, mList);
+        recycler_black.setAdapter(mBlackAdapter);
     }
 
     private class BlackAdapter extends BaseQuickAdapter<String,BaseViewHolder>{
@@ -54,8 +56,14 @@ public class BlackNameActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void convert(BaseViewHolder helper, String item) {
-
+        protected void convert(final BaseViewHolder helper, String item) {
+            helper.getView(R.id.right).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mList.remove(helper.getAdapterPosition());
+                    notifyDataSetChanged();
+                }
+            });
         }
     }
 }
