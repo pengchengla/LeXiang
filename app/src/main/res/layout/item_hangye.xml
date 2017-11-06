@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/fl_root_view"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_margin="5dp"
+             android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_circle_huise"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="技能传授"
+    />
+    <ImageView
+        android:id="@+id/iv_ischeck"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="right|top"
+        android:src="@drawable/icon_duihao"/>
+
+</FrameLayout>

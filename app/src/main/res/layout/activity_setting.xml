@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:id="@+id/activity_my_zi_liao"
+    android:id="@+id/activity_setting"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="www.lexiang.com.lexiang.Fragment.mine.MyZiLiaoActivity">
+    tools:context="www.lexiang.com.lexiang.Fragment.mine.SettingActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,79 +22,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="编辑个人资料"
+            android:text="设置"
             android:textColor="@color/white"
             android:textSize="16sp"/>
     </RelativeLayout>
     <RelativeLayout
-        android:id="@+id/rl_head"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp">
-        <www.lexiang.com.lexiang.view.CircleImageView
-            android:id="@+id/iv_head"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/defaulthead"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="100dp"
-            android:text="修改头像"
-            android:textSize="15sp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:src="@drawable/arrow_right"/>
-    </RelativeLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/huise"></View>
-    <RelativeLayout
-        android:id="@+id/rl_nichegn"
+        android:id="@+id/rl_yijian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="昵称"
-            android:textColor="@color/textblack"
-        />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="100dp"
-            android:text="xxx"
-            android:textSize="15sp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/arrow_right"/>
-    </RelativeLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/huise"></View>
-    <RelativeLayout
-        android:id="@+id/rl_intro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="个人简介"
+            android:text="意见反馈"
+            android:textSize="15sp"
             android:textColor="@color/textblack"
         />
         <ImageView
@@ -109,14 +50,42 @@
         android:layout_height="2dp"
         android:background="@color/huise"></View>
     <RelativeLayout
-        android:id="@+id/rl_address"
+        android:id="@+id/rl_cache"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="所在地"
+            android:text="清理缓存"
+            android:textSize="15sp"
+            android:textColor="@color/textblack"
+        />
+
+        <TextView
+            android:id="@+id/tv_cache_m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="已缓存 3.5M"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_right"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/huise"></View>
+    <RelativeLayout
+        android:id="@+id/rl_aboutus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关于我们"
+            android:textSize="15sp"
             android:textColor="@color/textblack"
         />
         <ImageView
@@ -131,52 +100,25 @@
         android:layout_height="2dp"
         android:background="@color/huise"></View>
     <RelativeLayout
+        android:id="@+id/rl_version"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="等级"
+            android:text="新版本"
+            android:textSize="15sp"
             android:textColor="@color/textblack"
         />
-        <TextView
-            android:id="@+id/tv_dengji"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="100dp"
-            android:text="1级"
-            android:textSize="15sp"/>
-    </RelativeLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/huise"></View>
-    <RelativeLayout
-        android:id="@+id/rl_psw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="密码"
-            android:textColor="@color/textblack"
-        />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="100dp"
-            android:text="修改密码"
-            android:textSize="15sp"/>
         <ImageView
+            android:layout_marginLeft="42dp"
             android:layout_width="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/arrow_right"/>
+            android:src="@drawable/red_point"/>
     </RelativeLayout>
     <View
         android:layout_width="match_parent"

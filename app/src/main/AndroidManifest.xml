@@ -36,6 +36,26 @@
         </activity>
         <activity android:name=".Fragment.mine.MyCollectActivity">
         </activity>
+        <activity android:name=".Fragment.mine.MyJifenActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.JifenJiluActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.SettingActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.YijianActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.AboutUSActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.ShareAppActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.ZhiNanActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.MyServiceActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.CreateServiceActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.ServiceAddActivity">
+        </activity>
     </application>
 
 </manifest>
