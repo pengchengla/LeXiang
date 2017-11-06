@@ -114,6 +114,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 addFragments(mineFragment);
                 break;
             case R.id.frag_add:
+                AddPopwindow popWindow = new AddPopwindow(MainActivity.this);
+                popWindow.showMoreWindow(v);
                 //加号
                 break;
         }

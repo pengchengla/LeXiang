@@ -36,6 +36,10 @@
         </activity>
         <activity android:name=".Fragment.mine.MyCollectActivity">
         </activity>
+        <activity android:name=".avtivity.ForgetpwdActivity"></activity>//修改密码
+        <activity android:name=".avtivity.fragment.AffirmpwdActivity"></activity>//完成修改
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".avtivity.ReleaseTwoActivity"></activity>
     </application>
 
 </manifest>

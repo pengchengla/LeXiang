@@ -1,4 +1,4 @@
-package yipengyu.baway.com.youyuanproject.base;
+package www.lexiang.com.lexiang.base;
 
 import android.app.ActivityManager;
 import android.app.Application;
@@ -18,6 +18,13 @@ import java.util.List;
 
 public class Myapplication extends Application {
     public static Myapplication application ;
+
+    public static Myapplication getInstance() {
+        return application;
+    }
+    public  static  Myapplication getAppContext(){
+        return application;
+    }
     @Override
     public void onCreate() {
         super.onCreate();
