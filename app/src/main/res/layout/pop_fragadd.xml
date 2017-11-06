@@ -1,21 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/hui"
+    android:gravity="bottom|center_horizontal"
+    android:alpha="0.9"
+    android:id="@+id/contentView">
     <LinearLayout
-        android:layout_marginTop="200dp"
+        android:id="@+id/liner"
+        android:layout_marginTop="150dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <TextView
             android:layout_marginLeft="20dp"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:text="发布信息"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
+  <LinearLayout
 
-</LinearLayout>
+      android:id="@+id/liner2"
+      android:layout_below="@id/liner"
+      android:layout_marginTop="10dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <TextView
+          android:id="@+id/release_text"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:drawablePadding="12dp"
+          android:drawableTop="@drawable/release_text"
+          android:gravity="center"
+          android:text="文字"
+          android:textColor="@color/textblack"/>
+      <TextView
+          android:id="@+id/release_photo"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:drawablePadding="12dp"
+          android:drawableTop="@drawable/release_photo"
+          android:gravity="center"
+          android:text="照片/视频"
+          android:textColor="@color/textblack"/>
+      <TextView
+          android:id="@+id/release_title"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:drawablePadding="12dp"
+          android:drawableTop="@drawable/release_title"
+          android:gravity="center"
+          android:text="文章"
+          android:textColor="@color/textblack"/>
+      <TextView
+          android:id="@+id/home_Social"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:drawablePadding="10dp"
+          android:gravity="center"
+          android:textColor="@color/textblack"/>
+
+  </LinearLayout>
+    <LinearLayout
+
+        android:id="@+id/liner3"
+        android:layout_below="@id/liner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="跳转链接"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+  <TextView
+      android:id="@+id/release_all"
+      android:background="@drawable/shape_line"
+      android:layout_marginTop="20dp"
+      android:layout_marginRight="10dp"
+     android:text="全部"
+      android:textSize="16sp"
+    android:gravity="center"
+    android:layout_width="55dp"
+    android:layout_height="25dp" />
+    </LinearLayout>
+     <LinearLayout
+         android:layout_below="@id/liner3"
+         android:layout_marginTop="15dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <TextView
+             android:id="@+id/release_shejiao"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:drawablePadding="12dp"
+             android:drawableTop="@drawable/release_social"
+             android:gravity="center"
+             android:text="社交频道"
+             android:textColor="@color/textblack"/>
+         <TextView
+             android:id="@+id/release_food"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:drawablePadding="12dp"
+             android:drawableTop="@drawable/release_food"
+             android:gravity="center"
+             android:text="发现美食"
+             android:textColor="@color/textblack"/>
+         <TextView
+             android:id="@+id/release_life"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:drawablePadding="12dp"
+             android:drawableTop="@drawable/release_life"
+             android:gravity="center"
+             android:text="生活服务"
+             android:textColor="@color/textblack"/>
+         <TextView
+             android:id="@+id/release_baoliao"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:drawablePadding="12dp"
+             android:drawableTop="@drawable/release_baoliao"
+             android:gravity="center"
+             android:text="身边爆料"
+             android:textColor="@color/textblack"/>
+     </LinearLayout>
+      <RelativeLayout
+          android:id="@+id/r_close"
+          android:layout_alignParentBottom="true"
+         android:background="@color/white"
+          android:layout_width="match_parent"
+          android:layout_height="45dp">
+          <ImageView
+              android:id="@+id/release_end"
+              android:layout_centerHorizontal="true"
+              android:src="@drawable/release_end"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent" />
+      </RelativeLayout>
+
+
+
+</RelativeLayout>
