@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import www.lexiang.com.lexiang.R;
 import www.lexiang.com.lexiang.base.BaseFragment;
@@ -97,6 +98,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 startActivity(intent3);
                 break;
             case R.id.tv_gojifen:
+                Toast.makeText(mContext, "签到成功", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.ll_edit://动态
                 Intent intent=new Intent(mContext,MyDongTaiActivity.class);

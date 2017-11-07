@@ -3,6 +3,8 @@ package www.lexiang.com.lexiang.Fragment.mine;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -11,8 +13,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import www.lexiang.com.lexiang.R;
+import www.lexiang.com.lexiang.view.BaseDialog;
 
-public class CreateServiceActivity extends AppCompatActivity implements View.OnClickListener {
+public class CreateService2Activity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView iv_back;
     private EditText edt_name;
@@ -24,13 +27,13 @@ public class CreateServiceActivity extends AppCompatActivity implements View.OnC
     private ImageView iv_card2;
     private TextView tv_looksample3;
     private ImageView iv_card3;
-    private TextView tv_submit;
+    private TextView tv_submit,tv_title;
     private LinearLayout activity_setting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_service);
+        setContentView(R.layout.activity_create_service2);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         initView();
     }
@@ -42,6 +45,7 @@ public class CreateServiceActivity extends AppCompatActivity implements View.OnC
         edt_shenfencard = (EditText) findViewById(R.id.edt_shenfencard);
         edt_shuoming = (EditText) findViewById(R.id.edt_shuoming);
         tv_looksample = (TextView) findViewById(R.id.tv_looksample);
+        tv_title = (TextView) findViewById(R.id.tv_title);
         tv_looksample.setOnClickListener(this);
         iv_card1 = (ImageView) findViewById(R.id.iv_card1);
         iv_card1.setOnClickListener(this);
@@ -56,6 +60,8 @@ public class CreateServiceActivity extends AppCompatActivity implements View.OnC
         tv_submit = (TextView) findViewById(R.id.tv_submit);
         tv_submit.setOnClickListener(this);
         activity_setting = (LinearLayout) findViewById(R.id.activity_setting);
+        if (!TextUtils.isEmpty(getIntent().getStringExtra("edit"))&& getIntent().getStringExtra("edit").equals("edit"))
+        tv_title.setText("添加内容");
     }
 
     private void submit() {
@@ -85,10 +91,13 @@ public class CreateServiceActivity extends AppCompatActivity implements View.OnC
                 finish();
                 break;
             case R.id.tv_looksample:
+                showDialog(Gravity.CENTER, R.style.Alpah_aniamtion);
                 break;
             case R.id.tv_looksample2:
+                showDialog(Gravity.CENTER, R.style.Alpah_aniamtion);
                 break;
             case R.id.tv_looksample3:
+                showDialog(Gravity.CENTER, R.style.Alpah_aniamtion);
                 break;
             case R.id.iv_card1:
                 break;
@@ -100,5 +109,23 @@ public class CreateServiceActivity extends AppCompatActivity implements View.OnC
                 submit();
                 break;
         }
+    }
+
+    private void showDialog(int grary, int animationStyle) {
+        BaseDialog.Builder builder = new BaseDialog.Builder(this);
+        final BaseDialog dialog = builder.setViewId(R.layout.dialog_card)
+                //设置dialogpadding
+                .setPaddingdp(10, 0, 10, 0)
+                //设置显示位置
+                .setGravity(grary)
+                //设置动画
+                .setAnimation(animationStyle)
+                //设置dialog的宽高
+                .setWidthHeightpx(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+                //设置触摸dialog外围是否关闭
+                .isOnTouchCanceled(true)
+                //设置监听事件
+                .builder();
+        dialog.show();
     }
 }

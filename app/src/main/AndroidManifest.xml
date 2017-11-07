@@ -36,7 +36,7 @@
         </activity>
         <activity android:name=".Fragment.mine.MyCollectActivity">
         </activity>
-        <activity android:name=".avtivity.ReleaseTwoActivity"></activity>
+        <activity android:name=".avtivity.ReleaseTwoActivity"/>
         <activity android:name=".Fragment.mine.MyJifenActivity">
         </activity>
         <activity android:name=".Fragment.mine.JifenJiluActivity">
@@ -51,11 +51,15 @@
         </activity>
         <activity android:name=".Fragment.mine.ZhiNanActivity">
         </activity>
-        <activity android:name=".Fragment.mine.MyServiceActivity">
+        <activity android:name=".Fragment.mine.CreateService1Activity">
         </activity>
-        <activity android:name=".Fragment.mine.CreateServiceActivity">
+        <activity android:name=".Fragment.mine.CreateService2Activity">
         </activity>
         <activity android:name=".Fragment.mine.ServiceAddActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.MyServiceActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.MyServiceDetailActivity">
         </activity>
     </application>
 
