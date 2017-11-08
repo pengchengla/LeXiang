@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -19,9 +18,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import www.lexiang.com.lexiang.R;
+import www.lexiang.com.lexiang.base.BaseActivity;
 import www.lexiang.com.lexiang.view.CircleImageView;
 
-public class MyServiceDetailActivity extends AppCompatActivity implements View.OnClickListener {
+public class MyServiceDetailActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView iv_back;
     private ImageView iv_share;

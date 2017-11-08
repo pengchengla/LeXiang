@@ -1,7 +1,6 @@
 package www.lexiang.com.lexiang.Fragment.mine;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
@@ -10,8 +9,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import www.lexiang.com.lexiang.R;
+import www.lexiang.com.lexiang.base.BaseActivity;
 
-public class ModifyNameActivity extends AppCompatActivity implements View.OnClickListener {
+public class ModifyNameActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView iv_back;
     private TextView tv_ok;

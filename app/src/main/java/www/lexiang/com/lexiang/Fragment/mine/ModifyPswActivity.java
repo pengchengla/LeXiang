@@ -1,7 +1,6 @@
 package www.lexiang.com.lexiang.Fragment.mine;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
@@ -11,8 +10,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import www.lexiang.com.lexiang.R;
+import www.lexiang.com.lexiang.base.BaseActivity;
 
-public class ModifyPswActivity extends AppCompatActivity implements View.OnClickListener {
+public class ModifyPswActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView iv_back;
     private EditText edt_psw;

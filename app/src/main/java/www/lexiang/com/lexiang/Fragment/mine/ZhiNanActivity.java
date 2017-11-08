@@ -1,11 +1,11 @@
 package www.lexiang.com.lexiang.Fragment.mine;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import www.lexiang.com.lexiang.R;
+import www.lexiang.com.lexiang.base.BaseActivity;
 
-public class ZhiNanActivity extends AppCompatActivity {
+public class ZhiNanActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

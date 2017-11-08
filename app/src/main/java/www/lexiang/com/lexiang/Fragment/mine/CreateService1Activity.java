@@ -3,7 +3,6 @@ package www.lexiang.com.lexiang.Fragment.mine;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ImageSpan;
@@ -13,8 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import www.lexiang.com.lexiang.R;
+import www.lexiang.com.lexiang.base.BaseActivity;
 
-public class CreateService1Activity extends AppCompatActivity implements View.OnClickListener {
+public class CreateService1Activity extends BaseActivity implements View.OnClickListener {
 
     private ImageView iv_back;
     private TextView tv_content;

@@ -3,7 +3,6 @@ package www.lexiang.com.lexiang.Fragment.mine;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -25,9 +24,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import www.lexiang.com.lexiang.R;
+import www.lexiang.com.lexiang.base.BaseActivity;
 import www.lexiang.com.lexiang.bean.HangyeBean;
 
-public class ServiceAddActivity extends AppCompatActivity implements View.OnClickListener {
+public class ServiceAddActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView iv_back;
     private EditText edt_title;

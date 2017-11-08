@@ -2,7 +2,6 @@ package www.lexiang.com.lexiang.Fragment.mine;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -10,9 +9,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import www.lexiang.com.lexiang.R;
+import www.lexiang.com.lexiang.base.BaseActivity;
 import www.lexiang.com.lexiang.view.CircleImageView;
 
-public class MyZiLiaoActivity extends AppCompatActivity implements View.OnClickListener {
+public class MyZiLiaoActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView iv_back;
     private CircleImageView iv_head;

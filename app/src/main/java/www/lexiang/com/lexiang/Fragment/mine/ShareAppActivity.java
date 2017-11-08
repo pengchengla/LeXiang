@@ -1,15 +1,18 @@
 package www.lexiang.com.lexiang.Fragment.mine;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import www.lexiang.com.lexiang.R;
+import www.lexiang.com.lexiang.base.BaseActivity;
 
-public class ShareAppActivity extends AppCompatActivity {
+public class ShareAppActivity extends BaseActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share_app);
     }
+
+
 }
