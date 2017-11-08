@@ -46,6 +46,7 @@ public class ImageDetailFragment extends Fragment {
 		super.onPause();
 		mImageView.destroyDrawingCache();
 	}
+
 	@Override
 	public void onDestroyView() {
 		// TODO Auto-generated method stub
