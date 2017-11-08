@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+     <www.lexiang.com.lexiang.view.CircleImageView
+         android:id="@+id/gaditem_pho"
+         android:layout_margin="10dp"
+         android:src="@drawable/gadget_body"
+         android:layout_width="60dp"
+         android:layout_height="60dp" />
+      <TextView
+          android:textColor="@color/font_orage"
+          android:textSize="16sp"
+          android:layout_marginTop="12dp"
+          android:text="凉生"
+          android:layout_toRightOf="@id/gaditem_pho"
+           android:id="@+id/gaditem_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+    <TextView
+        android:layout_alignParentRight="true"
+        android:textColor="@color/textblack"
+        android:textSize="15sp"
+        android:layout_marginTop="12dp"
+        android:text="4分钟前"
+        android:layout_marginRight="10dp"
+        android:id="@+id/gaditem_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="5dp"
+        android:padding="2dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/gaditem_name"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:text="如果明天的路你不知该往哪走,就留在我身边做我老婆好不好"
+        android:layout_toRightOf="@id/gaditem_pho"
+        android:id="@+id/gaditem_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recy_grade"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/gaditem_pho"
+        android:layout_below="@id/gaditem_count"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+<LinearLayout
+
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="10dp"
+    android:weightSum="3"
+    android:layout_marginLeft="70dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="left"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+    <TextView
+
+        android:layout_gravity="center"
+        android:drawablePadding="8dp"
+        android:drawableLeft="@drawable/gadget_pinlun"
+        android:textSize="16sp"
+        android:text="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:gravity="center"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/gadget_dz"
+        android:textSize="16sp"
+        android:text="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        </LinearLayout>
+    <LinearLayout
+        android:gravity="right"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:drawablePadding="10dp"
+        android:gravity="right"
+        android:drawableLeft="@drawable/gadget_look"
+        android:textSize="16sp"
+        android:text="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:background="@color/hui"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+</LinearLayout>

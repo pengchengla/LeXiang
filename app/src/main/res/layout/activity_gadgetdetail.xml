@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <www.lexiang.com.lexiang.view.CircleImageView
+        android:id="@+id/gaditemdetai_pho"
+        android:layout_margin="10dp"
+        android:src="@drawable/gadget_body"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:text="凉生"
+        android:layout_toRightOf="@id/gaditemdetai_pho"
+        android:id="@+id/gaditemdetail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/gaditemdetai_pho"
+          android:layout_below="@id/gaditemdetail_name"
+        android:textColor="@color/texthui"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        android:text="4分钟前"
+        android:layout_marginRight="10dp"
+        android:id="@+id/gaditemdteail_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/gaditemdteail_time"
+            android:layout_below="@id/gaditemdetail_name"
+            android:textColor="@color/texthui"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:text="浏览量：250"
+            android:layout_marginRight="10dp"
+            android:id="@+id/gaditem_looknum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:padding="5dp"   
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:text="如果明天的路你不知该往哪走,就留在我身边做我老婆好不好"
+        android:id="@+id/gaditem_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <www.lexiang.com.lexiang.utils.NoScrollGridView
+          android:id="@+id/gridview"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dp"
+          android:layout_marginTop="3dp"
+          android:columnWidth="70dp"
+          android:gravity="center"
+          android:horizontalSpacing="2.5dp"
+          android:numColumns="3"
+          android:stretchMode="columnWidth"
+          android:verticalSpacing="2.5dp" >
+</www.lexiang.com.lexiang.utils.NoScrollGridView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/line"
+            android:layout_marginTop="42dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/orange"
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            ></View>
+        <TextView
+            android:textColor="@color/orange"
+            android:id="@+id/zan"
+            android:textSize="17sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@id/line"
+            android:text="赞："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="@color/orange"
+            android:textSize="17sp"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@id/zan"
+            android:text="34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/gadget_dz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View
+        android:background="@color/hui"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/detai_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+    </android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/detail_all"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/texthui"
+            android:layout_alignParentRight="true"
+            android:textSize="14sp"
+            android:text="查看全部"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <View
+        android:background="@color/hui"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+
+      <LinearLayout
+          android:layout_marginTop="10dp"
+          android:layout_marginLeft="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <TextView
+
+              android:gravity="center"
+              android:id="@+id/pin_num"
+              android:layout_gravity="center"
+              android:drawablePadding="8dp"
+              android:drawableLeft="@drawable/gadget_pinlun"
+              android:textSize="16sp"
+              android:text="10"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+      </LinearLayout>
+    <View
+        android:background="@color/hui"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+     <android.support.v7.widget.RecyclerView
+         android:id="@+id/detail_count"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

@@ -1,13 +1,14 @@
 package www.lexiang.com.lexiang.Fragment;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import www.lexiang.com.lexiang.MainActivity;
 import www.lexiang.com.lexiang.R;
 import www.lexiang.com.lexiang.adapter.Homebodyadapter;
+import www.lexiang.com.lexiang.avtivity.GadgetActivity;
 import www.lexiang.com.lexiang.base.BaseFragment;
 import www.lexiang.com.lexiang.bean.Homebean;
 import www.lexiang.com.lexiang.utils.MyListview;
@@ -62,6 +63,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.home_Social:
+                Intent intent=new Intent(getActivity(), GadgetActivity.class);
+                startActivity(intent);
                 break;
             case R.id.home_bighelp:
                 break;

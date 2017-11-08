@@ -3,7 +3,6 @@ package www.lexiang.com.lexiang;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
@@ -41,7 +40,7 @@ import www.lexiang.com.lexiang.utils.ScreenUtils;
 public class AddPopwindow extends PopupWindow implements View.OnClickListener {
 
           private View rootView;
-          private Activity mContext;
+          private MainActivity mContext;
          private RelativeLayout contentView;
 
     private TextView release_text,release_baoliao,release_food,release_life,release_photo
@@ -52,7 +51,7 @@ public class AddPopwindow extends PopupWindow implements View.OnClickListener {
     private RecyclerView recyclerView;
     private ScrollView relsease_scroll;
 
-    public AddPopwindow( Activity mContext) {
+    public AddPopwindow( MainActivity mContext) {
         this.mContext = mContext;
     }
     public void showMoreWindow(View anchor) {
@@ -205,6 +204,8 @@ public class AddPopwindow extends PopupWindow implements View.OnClickListener {
                   break;
               case R.id.release_text:
                   Toast.makeText(mContext, "aad", Toast.LENGTH_SHORT).show();
+
+
 
                   break;
               case R.id.release_photo:

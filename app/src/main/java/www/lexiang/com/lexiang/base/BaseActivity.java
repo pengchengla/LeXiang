@@ -26,6 +26,7 @@ public class BaseActivity extends AppCompatActivity {
         if (activityList != null)
             activityList.add(this);
 
+
     }
 
     @Override
