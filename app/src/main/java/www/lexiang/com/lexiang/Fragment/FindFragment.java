@@ -114,8 +114,6 @@ public class FindFragment extends BaseFragment implements View.OnClickListener {
             case R.id.text_person:
                 if (bianminFragment == null) {
                     bianminFragment = new BianminFragment();
-
-
                 }
                 addFragments(bianminFragment);
                 v2.setVisibility(View.VISIBLE);
