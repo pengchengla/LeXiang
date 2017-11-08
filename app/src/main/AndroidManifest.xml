@@ -79,6 +79,31 @@
         </activity>
         <activity android:name=".Fragment.mine.MyCollectActivity">
         </activity>
+        <activity android:name=".avtivity.ReleaseTwoActivity"/>
+        <activity android:name=".Fragment.mine.MyJifenActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.JifenJiluActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.SettingActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.YijianActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.AboutUSActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.ShareAppActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.ZhiNanActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.CreateService1Activity">
+        </activity>
+        <activity android:name=".Fragment.mine.CreateService2Activity">
+        </activity>
+        <activity android:name=".Fragment.mine.ServiceAddActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.MyServiceActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.MyServiceDetailActivity">
+        </activity>
         <activity android:name=".avtivity.ReleaseTwoActivity"></activity>
         <activity android:name=".avtivity.GadgetActivity"></activity>
     </application>

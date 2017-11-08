@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import www.lexiang.com.lexiang.R;
 import www.lexiang.com.lexiang.base.BaseFragment;
@@ -87,6 +88,8 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.iv_setting:
+                Intent intent5=new Intent(mContext,SettingActivity.class);
+                startActivity(intent5);
                 break;
             case R.id.iv_head:
                 break;
@@ -95,6 +98,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 startActivity(intent3);
                 break;
             case R.id.tv_gojifen:
+                Toast.makeText(mContext, "签到成功", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.ll_edit://动态
                 Intent intent=new Intent(mContext,MyDongTaiActivity.class);
@@ -117,12 +121,20 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 startActivity(intent2);
                 break;
             case R.id.tv_myjifen:
+                Intent intent6=new Intent(mContext,MyJifenActivity.class);
+                startActivity(intent6);
                 break;
             case R.id.tv_myfuwu:
+                Intent intent9=new Intent(mContext,MyServiceActivity.class);
+                startActivity(intent9);
                 break;
             case R.id.tv_zhinan:
+                Intent intent8=new Intent(mContext,ZhiNanActivity.class);
+                startActivity(intent8);
                 break;
             case R.id.tv_shareapp:
+                Intent intent7=new Intent(mContext,ShareAppActivity.class);
+                startActivity(intent7);
                 break;
         }
     }

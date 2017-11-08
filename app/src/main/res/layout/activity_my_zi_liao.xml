@@ -37,7 +37,7 @@
             android:id="@+id/iv_head"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/icon_shop"/>
+            android:src="@drawable/defaulthead"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
