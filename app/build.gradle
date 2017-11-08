@@ -1,16 +1,23 @@
 apply plugin: 'com.android.application'
 
 android {
+     //环信
+
+    useLibrary 'org.apache.http.legacy'
     compileSdkVersion 23
     buildToolsVersion "25.0.0"
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
+    repositories {
+        maven { url "https://maven.google.com/"}
+    }
     defaultConfig {
         applicationId "www.lexiang.com.lexiang"
         minSdkVersion 16
         targetSdkVersion 22//懒得做权限适配
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -26,7 +33,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:appcompat-v7:22.2.1'
     testCompile 'junit:junit:4.12'
     //沉浸式
     compile 'org.zackratos:ultimatebar:1.0.3'
@@ -54,4 +61,12 @@ dependencies {
     //fastjson
     compile 'com.alibaba:fastjson:1.1.62.android'
     compile files('libs/gson-2.7.jar')
+    //环信
+   // compile 'com.google.android.gms:play-services-gcm:9.4.0'
+  //  compile 'com.hyphenate:hyphenate-sdk:3.3.0'
+    compile project(':easeui')
+    //解决655536
+    compile 'com.android.support:multidex:1.0.0'
+    //Springview
+    compile 'com.liaoinstan.springview:library:1.2.6'
 }
