@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rb_message.setOnClickListener(this);
         rb_mine.setOnClickListener(this);
         frag_add.setOnClickListener(this);
-
     }
 
     private void addFragments(Fragment f) {

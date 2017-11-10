@@ -35,12 +35,13 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //        System.out.println("onCreateView被调用");
-     //   view = inflater.inflate(setContentView(), container, false);
+        //   view = inflater.inflate(setContentView(), container, false);
         isInit = true;
         /**初始化的时候去加载数据**/
         isCanLoadData();
         return initView();
     }
+
     /**
      * 视图是否已经对用户可见，系统的方法
      */
@@ -49,6 +50,7 @@ public abstract class BaseFragment extends Fragment {
         super.setUserVisibleHint(isVisibleToUser);
         isCanLoadData();
     }
+
     /**
      * 是否可以加载数据
      * 可以加载数据的条件：
@@ -61,42 +63,41 @@ public abstract class BaseFragment extends Fragment {
         }
 
         if (getUserVisibleHint()) {
-            lazyLoad();
             isLoad = true;
+            lazyLoad();
         } else {
-            if (isLoad) {
-                stopLoad();
-            }
+            isLoad = false;
+            stopLoad();
         }
     }
 
-//    /**
-//     * 设置Fragment要显示的布局
-//     *
-//     * @return 布局的layoutId
-//     */
-//    protected abstract int setContentView();
-//
-//    /**
-//     * 获取设置的布局
-//     *
-//     * @return
-//     */
-//    protected View getContentView() {
-//        return view;
-//    }
+    //    /**
+    //     * 设置Fragment要显示的布局
+    //     *
+    //     * @return 布局的layoutId
+    //     */
+    //    protected abstract int setContentView();
+    //
+    //    /**
+    //     * 获取设置的布局
+    //     *
+    //     * @return
+    //     */
+    //    protected View getContentView() {
+    //        return view;
+    //    }
 
-//    /**
-//     * 找出对应的控件
-//     *
-//     * @param id
-//     * @param <T>
-//     * @return
-//     */
-//    protected <T extends View> T findViewById(int id) {
-//
-//        return (T) getContentView().findViewById(id);
-//    }
+    //    /**
+    //     * 找出对应的控件
+    //     *
+    //     * @param id
+    //     * @param <T>
+    //     * @return
+    //     */
+    //    protected <T extends View> T findViewById(int id) {
+    //
+    //        return (T) getContentView().findViewById(id);
+    //    }
 
     /**
      * 当视图初始化并且对用户可见的时候去真正的加载数据
@@ -109,8 +110,8 @@ public abstract class BaseFragment extends Fragment {
     protected void stopLoad() {
     }
 
-    public float getpx(int dp){
-        return dp*getResources().getDisplayMetrics().density;
+    public float getpx(int dp) {
+        return dp * getResources().getDisplayMetrics().density;
     }
 
     //强制子类实现该方法，展示界面view
@@ -126,8 +127,6 @@ public abstract class BaseFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         //        System.out.println("onActivityCreated被调用");
     }
-
-
 
 
 }
