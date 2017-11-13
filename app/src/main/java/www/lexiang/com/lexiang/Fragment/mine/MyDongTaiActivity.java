@@ -7,17 +7,10 @@ import android.widget.TextView;
 
 import www.lexiang.com.lexiang.R;
 import www.lexiang.com.lexiang.base.BaseActivity;
-import www.lexiang.com.lexiang.view.CircleImageView;
 
 public class MyDongTaiActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView iv_back;
-    private CircleImageView iv_head;
-    private TextView tv_nicheng;
-    private TextView tv_dengji;
-    private TextView tv_guanzhu_count;
-    private TextView tv_fensi_count;
-    private TextView tv_qianming;
     private TextView tv_qwsj;
     private TextView tv_locallife;
     private TextView tv_dajiabang;
@@ -35,13 +28,6 @@ public class MyDongTaiActivity extends BaseActivity implements View.OnClickListe
     private void initView() {
         iv_back = (ImageView) findViewById(R.id.iv_back);
         iv_back.setOnClickListener(this);
-        iv_head = (CircleImageView) findViewById(R.id.iv_head);
-        iv_head.setOnClickListener(this);
-        tv_nicheng = (TextView) findViewById(R.id.tv_nicheng);
-        tv_dengji = (TextView) findViewById(R.id.tv_dengji);
-        tv_guanzhu_count = (TextView) findViewById(R.id.tv_guanzhu_count);
-        tv_fensi_count = (TextView) findViewById(R.id.tv_fensi_count);
-        tv_qianming = (TextView) findViewById(R.id.tv_qianming);
         tv_qwsj = (TextView) findViewById(R.id.tv_qwsj);
         tv_qwsj.setOnClickListener(this);
         tv_locallife = (TextView) findViewById(R.id.tv_locallife);
@@ -61,8 +47,6 @@ public class MyDongTaiActivity extends BaseActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.iv_back:
                 finish();
-                break;
-            case R.id.iv_head:
                 break;
             case R.id.tv_qwsj:
                 break;

@@ -1,5 +1,6 @@
 package www.lexiang.com.lexiang.Fragment.message;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -41,6 +42,7 @@ public class ContactsActivity extends BaseActivity implements View.OnClickListen
         mvp = (ViewPager) findViewById(R.id.mvp);
         activity_setting = (LinearLayout) findViewById(R.id.activity_setting);
         tv_jianqun= (TextView) findViewById(R.id.tv_jianqun);
+        tv_jianqun.setOnClickListener(this);
         if (mBaseFragmentList.size() <= 0) {
             mBaseFragmentList.add(new GuanZhuFragment());
             mBaseFragmentList.add(new FenSiFragment());
@@ -104,6 +106,9 @@ public class ContactsActivity extends BaseActivity implements View.OnClickListen
         switch (v.getId()) {
             case R.id.iv_back:
                 finish();
+                break;
+            case R.id.tv_jianqun:
+                startActivity(new Intent(this,CreateQunActivity.class));
                 break;
         }
     }

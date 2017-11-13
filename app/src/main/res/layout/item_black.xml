@@ -1,55 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:id="@+id/ll_root"
               xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:clickable="true"
               android:orientation="vertical">
 
-    <www.lexiang.com.lexiang.view.EasySwipeMenuLayout
-        android:id="@+id/es"
+    <LinearLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:contentView="@+id/content"
-        app:rightMenuView="@+id/right">
-
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <www.lexiang.com.lexiang.view.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/defaulthead"/>
         <LinearLayout
-            android:id="@+id/content"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:padding="10dp">
-            <www.lexiang.com.lexiang.view.CircleImageView
-                android:id="@+id/iv_head"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/defaulthead"/>
-            <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/tv_nicheng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="昵称"
+                    android:textColor="@color/yellow"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/tv_dengji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="@color/yellow"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="LV1"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:text="昵称"
-                android:textColor="@color/textblack"/>
-
+                android:text="个性签名"
+                android:textColor="@color/textblack"
+                android:textSize="12sp"/>
         </LinearLayout>
+    </LinearLayout>
 
-        <TextView
-            android:id="@+id/right"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/text_red_dark"
-            android:clickable="true"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:padding="10dp"
-            android:text="移除黑名单"/>
-
-    </www.lexiang.com.lexiang.view.EasySwipeMenuLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

@@ -27,7 +27,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     private TextView tvZiliao;
     private TextView tvGojifen;
     private LinearLayout llEdit;
-    private LinearLayout llCollect;
+    private LinearLayout llCollect,ll_guanzhu,ll_fensi;
     private LinearLayout llShop;
     private TextView tvWeather;
     private TextView tvKuaidi;
@@ -81,6 +81,10 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
         tv_zhinan.setOnClickListener(this);
         tv_shareapp = (TextView) view.findViewById(R.id.tv_shareapp);
         tv_shareapp.setOnClickListener(this);
+        ll_guanzhu= (LinearLayout) view.findViewById(R.id.ll_guanzhu);
+        ll_guanzhu.setOnClickListener(this);
+        ll_fensi= (LinearLayout) view.findViewById(R.id.ll_fensi);
+        ll_fensi.setOnClickListener(this);
         return view;
     }
 
@@ -135,6 +139,14 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
             case R.id.tv_shareapp:
                 Intent intent7=new Intent(mContext,ShareAppActivity.class);
                 startActivity(intent7);
+                break;
+            case R.id.ll_guanzhu:
+                Intent intent11=new Intent(mContext,MyGuanzhuActivity.class);
+                startActivity(intent11);
+                break;
+            case R.id.ll_fensi:
+                Intent intent10=new Intent(mContext,MyFensiActivity.class);
+                startActivity(intent10);
                 break;
         }
     }

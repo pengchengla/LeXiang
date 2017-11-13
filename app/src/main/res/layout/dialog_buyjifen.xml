@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/white"
+              android:padding="20dp"
+              android:background="@drawable/bg_circle_white"
               android:orientation="vertical">
     <TextView
         android:layout_width="wrap_content"
@@ -18,7 +19,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:padding="20dp"
+        android:padding="15dp"
         android:layout_height="wrap_content"
-        android:text="支付前请截图联系乐享客服"/>
+        android:text="购买积分请联系客服"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="打电话"/>
 </LinearLayout>

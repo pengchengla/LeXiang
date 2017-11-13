@@ -1,5 +1,6 @@
 package www.lexiang.com.lexiang.Fragment.message;
 
+import android.content.Intent;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -44,6 +45,12 @@ public class QunZuFragment extends BaseFragment {
 
         CommentQunZuAdapter commentQunZuAdapter = new CommentQunZuAdapter(R.layout.item_qunzu, list);
         recyler_comment_qunzu.setAdapter(commentQunZuAdapter);
+        commentQunZuAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                startActivity(new Intent(mContext,QunIntroActivity.class));
+            }
+        });
         return view;
     }
 

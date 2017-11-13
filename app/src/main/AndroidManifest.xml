@@ -21,6 +21,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
+        android:name=".base.Myapplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -113,6 +114,18 @@
         <activity android:name=".Fragment.message.zhouBianActivity">
         </activity>
         <activity android:name=".Fragment.message.ContactsActivity">
+        </activity>
+        <activity android:name=".Fragment.message.QunIntroActivity">
+        </activity>
+        <activity android:name=".Fragment.message.CreateQunActivity">
+        </activity>
+        <activity android:name=".Fragment.message.QunChatActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.MyDengjiActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.MyFensiActivity">
+        </activity>
+        <activity android:name=".Fragment.mine.MyGuanzhuActivity">
         </activity>
     </application>
 
