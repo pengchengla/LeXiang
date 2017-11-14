@@ -4,6 +4,7 @@
               android:layout_height="match_parent"
               android:background="@drawable/bg_circle_white"
               android:orientation="vertical"
+              android:padding="10dp"
 >
     <TextView
         android:id="@+id/tv_content"
@@ -11,33 +12,39 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="20dp"
-        android:text="刷新消耗5积分,继续吗？"
+        android:gravity="center"
+        android:text="不再关注？"
         android:textColor="#333"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/huise"
     >
         <TextView
             android:id="@+id/tv_canel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginTop="1dp"
             android:layout_weight="1"
-            android:background="@drawable/bg_huise"
+            android:background="@color/white"
             android:gravity="center"
             android:padding="8dp"
             android:text="取消"
-            android:textColor="@color/textblack"/>
+            android:textColor="@color/blue"/>
         <TextView
             android:id="@+id/tv_yes"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
             android:layout_weight="1"
-            android:background="@drawable/bg_huise"
+            android:background="@color/white"
             android:gravity="center"
             android:padding="8dp"
             android:text="确定"
-            android:textColor="@color/textblack"/>
+            android:textColor="@color/blue"
+        />
     </LinearLayout>
 </LinearLayout>

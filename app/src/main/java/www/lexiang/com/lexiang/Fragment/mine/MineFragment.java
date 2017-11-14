@@ -131,6 +131,8 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
             case R.id.tv_myfuwu:
                 Intent intent9=new Intent(mContext,MyServiceActivity.class);
                 startActivity(intent9);
+//                Intent intent9=new Intent(mContext,CreateService1Activity.class);
+//                startActivity(intent9);
                 break;
             case R.id.tv_zhinan:
                 Intent intent8=new Intent(mContext,ZhiNanActivity.class);

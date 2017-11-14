@@ -5,6 +5,7 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -18,6 +19,7 @@ import java.util.List;
 
 import www.lexiang.com.lexiang.R;
 import www.lexiang.com.lexiang.base.BaseActivity;
+import www.lexiang.com.lexiang.view.BaseDialog;
 
 public class MyFensiActivity extends BaseActivity implements View.OnClickListener {
 
@@ -56,8 +58,49 @@ public class MyFensiActivity extends BaseActivity implements View.OnClickListene
 
         @Override
         protected void convert(BaseViewHolder helper, String item) {
-
+            final TextView tv_guanzhu = helper.getView(R.id.tv_guanzhu);
+            tv_guanzhu.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (tv_guanzhu.getText().toString().equals("互相关注")) {
+                        tv_guanzhu.setText("已关注");
+                    } else {
+                        showDialog(Gravity.CENTER, R.style.Alpah_aniamtion,tv_guanzhu);
+                    }
+                }
+            });
         }
+    }
+
+    private void showDialog(int grary, int animationStyle, final TextView tv_guanzhu) {
+        BaseDialog.Builder builder = new BaseDialog.Builder(this);
+        final BaseDialog dialog = builder.setViewId(R.layout.dialog_guanzhu)
+                //设置dialogpadding
+                .setPaddingdp(10, 0, 10, 0)
+                //设置显示位置
+                .setGravity(grary)
+                //设置动画
+                .setAnimation(animationStyle)
+                //设置dialog的宽高
+                .setWidthHeightpx(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+                //设置触摸dialog外围是否关闭
+                .isOnTouchCanceled(true)
+                //设置监听事件
+                .builder();
+        dialog.show();
+        dialog.getView(R.id.tv_canel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.getView(R.id.tv_yes).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                tv_guanzhu.setText("互相关注");
+            }
+        });
     }
 
     @Override
@@ -68,4 +111,5 @@ public class MyFensiActivity extends BaseActivity implements View.OnClickListene
                 break;
         }
     }
+
 }

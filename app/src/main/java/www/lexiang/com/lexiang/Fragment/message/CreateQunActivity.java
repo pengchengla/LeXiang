@@ -3,13 +3,11 @@ package www.lexiang.com.lexiang.Fragment.message;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import www.lexiang.com.lexiang.R;
 import www.lexiang.com.lexiang.view.CircleImageView;
@@ -46,17 +44,17 @@ public class CreateQunActivity extends AppCompatActivity implements View.OnClick
 
     private void submit() {
         // validate
-        String name = edt_name.getText().toString().trim();
-        if (TextUtils.isEmpty(name)) {
-            Toast.makeText(this, "name不能为空", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        String intro = edt_intro.getText().toString().trim();
-        if (TextUtils.isEmpty(intro)) {
-            Toast.makeText(this, "intro不能为空", Toast.LENGTH_SHORT).show();
-            return;
-        }
+//        String name = edt_name.getText().toString().trim();
+//        if (TextUtils.isEmpty(name)) {
+//            Toast.makeText(this, "name不能为空", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//
+//        String intro = edt_intro.getText().toString().trim();
+//        if (TextUtils.isEmpty(intro)) {
+//            Toast.makeText(this, "intro不能为空", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
 
         startActivity(new Intent(this,QunChatActivity.class));
     }

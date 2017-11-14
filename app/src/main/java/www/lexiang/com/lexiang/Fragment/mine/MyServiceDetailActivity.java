@@ -29,13 +29,9 @@ public class MyServiceDetailActivity extends BaseActivity implements View.OnClic
     private TextView tv_name;
     private TextView tv_time;
     private TextView tv_title, tv_reedit;
-    private TextView tv_content;
-    private TextView tv_dianzancount;
-    private ImageView iv_dianzan;
-    private RecyclerView recycler_dianzan;
-    private TextView tv_msg_count;
+    private RecyclerView recycler_tupian;
     private RecyclerView recycler_comment;
-    private DianZanAdapter mDianZanAdapter;
+    private PhotoAdapter mPhotoAdapter;
     private CommentAdapter mCommentAdapter;
 
     @Override
@@ -56,20 +52,15 @@ public class MyServiceDetailActivity extends BaseActivity implements View.OnClic
         tv_name = (TextView) findViewById(R.id.tv_name);
         tv_time = (TextView) findViewById(R.id.tv_time);
         tv_title = (TextView) findViewById(R.id.tv_title);
-        tv_content = (TextView) findViewById(R.id.tv_content);
-        tv_dianzancount = (TextView) findViewById(R.id.tv_dianzancount);
-        iv_dianzan = (ImageView) findViewById(R.id.iv_dianzan);
-        iv_dianzan.setOnClickListener(this);
-        recycler_dianzan = (RecyclerView) findViewById(R.id.recycler_dianzan);
-        recycler_dianzan.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        recycler_dianzan.setNestedScrollingEnabled(false);
+        recycler_tupian = (RecyclerView) findViewById(R.id.recycler_tupian);
+        recycler_tupian.setLayoutManager(new LinearLayoutManager(this));
+        recycler_tupian.setNestedScrollingEnabled(false);
         List<String> list = new ArrayList<>();
         list.add("");
         list.add("");
         list.add("");
-        mDianZanAdapter = new DianZanAdapter(R.layout.item_dianzan, list);
-        recycler_dianzan.setAdapter(mDianZanAdapter);
-        tv_msg_count = (TextView) findViewById(R.id.tv_msg_count);
+        mPhotoAdapter = new PhotoAdapter(R.layout.item_photo, list);
+        recycler_tupian.setAdapter(mPhotoAdapter);
         recycler_comment = (RecyclerView) findViewById(R.id.recycler_comment);
         recycler_comment.setLayoutManager(new LinearLayoutManager(this));
         recycler_comment.setNestedScrollingEnabled(false);
@@ -77,15 +68,15 @@ public class MyServiceDetailActivity extends BaseActivity implements View.OnClic
         recycler_comment.setAdapter(mCommentAdapter);
     }
 
-    private class DianZanAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
+    private class PhotoAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
 
-        public DianZanAdapter(@LayoutRes int layoutResId, @Nullable List<String> data) {
+        public PhotoAdapter(@LayoutRes int layoutResId, @Nullable List<String> data) {
             super(layoutResId, data);
         }
 
         @Override
         protected void convert(BaseViewHolder helper, String item) {
-            Glide.with(mContext).load(R.drawable.defaulthead).into((ImageView) helper.getView(R.id.iv_head));
+            Glide.with(mContext).load(R.drawable.home_title).into((ImageView) helper.getView(R.id.iv_head));
         }
     }
 
@@ -108,11 +99,8 @@ public class MyServiceDetailActivity extends BaseActivity implements View.OnClic
                 break;
             case R.id.iv_share:
                 break;
-            case R.id.iv_dianzan:
-                break;
             case R.id.tv_reedit:
-                Intent intent = new Intent(this, CreateService2Activity.class);
-                intent.putExtra("edit", "edit");
+                Intent intent = new Intent(this, ServiceAddActivity.class);
                 startActivity(intent);
                 break;
         }

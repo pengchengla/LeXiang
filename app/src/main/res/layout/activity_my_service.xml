@@ -32,12 +32,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/shape_button"
+            android:background="@drawable/shape_buttonyellow"
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingTop="5dp"
-            android:text="添加内容"
+            android:text="添加服务"
             android:textColor="@color/white"
             android:textSize="14sp"/>
     </RelativeLayout>

@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="添加内容"
+                android:text="添加服务"
                 android:textColor="@color/white"
                 android:textSize="16sp"/>
         </RelativeLayout>
@@ -86,13 +86,12 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
                     android:layout_margin="20dp"
                     android:src="@drawable/icon_plus"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
+                    android:layout_gravity="center_horizontal"
                     android:text="添加图片"
                 />
             </LinearLayout>
@@ -255,7 +254,7 @@
             android:paddingLeft="100dp"
             android:paddingRight="100dp"
             android:paddingTop="10dp"
-            android:text="提交认证"
+            android:text="提交"
             android:textColor="@color/white"
             android:textSize="16sp"/>
     </LinearLayout>

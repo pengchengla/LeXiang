@@ -2,7 +2,6 @@ package www.lexiang.com.lexiang.Fragment.mine;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
@@ -60,8 +59,6 @@ public class CreateService2Activity extends BaseActivity implements View.OnClick
         tv_submit = (TextView) findViewById(R.id.tv_submit);
         tv_submit.setOnClickListener(this);
         activity_setting = (LinearLayout) findViewById(R.id.activity_setting);
-        if (!TextUtils.isEmpty(getIntent().getStringExtra("edit"))&& getIntent().getStringExtra("edit").equals("edit"))
-        tv_title.setText("添加内容");
     }
 
     private void submit() {
@@ -81,7 +78,7 @@ public class CreateService2Activity extends BaseActivity implements View.OnClick
 //            Toast.makeText(this, "该说明只用于审核不对外显示", Toast.LENGTH_SHORT).show();
 //            return;
 //        }
-        startActivity(new Intent(this,ServiceAddActivity.class));
+        startActivity(new Intent(this,CreateService3Activity.class));
     }
 
     @Override

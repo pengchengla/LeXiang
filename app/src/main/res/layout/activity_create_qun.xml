@@ -29,9 +29,11 @@
     </RelativeLayout>
     <LinearLayout
         android:id="@+id/ll_addhead"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
         <www.lexiang.com.lexiang.view.CircleImageView
             android:id="@+id/iv_head"
             android:layout_width="80dp"
@@ -43,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:padding="10dp"
-            android:text="添加头像"
+            android:text="上传群图片"
         />
     </LinearLayout>
     <View
@@ -68,7 +70,7 @@
             android:layout_gravity="center_vertical"
             android:background="@null"
             android:padding="10dp"
-            android:text="名称"
+            android:hint="请输入群名称"
             android:textColorHint="@color/font_black_4"
             android:textSize="14sp"
         />
@@ -93,13 +95,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
+            android:gravity="left"
             android:minHeight="100dp"
             android:padding="10dp"
-            android:text="简介"
-            android:gravity="left"
+            android:hint="请输入群简介（140字以内）"
             android:textColorHint="@color/font_black_4"
             android:textSize="14sp"
         />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/huise"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="群成员"
+            android:textColor="@color/textblack"/>
+
     </LinearLayout>
     <View
         android:layout_width="match_parent"

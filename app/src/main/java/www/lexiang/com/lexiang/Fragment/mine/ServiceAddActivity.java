@@ -1,11 +1,11 @@
 package www.lexiang.com.lexiang.Fragment.mine;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -14,7 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -123,23 +122,24 @@ public class ServiceAddActivity extends BaseActivity implements View.OnClickList
 
     private void submit() {
         // validate
-        String title = edt_title.getText().toString().trim();
-        if (TextUtils.isEmpty(title)) {
-            Toast.makeText(this, "会员怎么开", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        String content = edt_content.getText().toString().trim();
-        if (TextUtils.isEmpty(content)) {
-            Toast.makeText(this, "请输入内容", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        String mobile = edt_mobile.getText().toString().trim();
-        if (TextUtils.isEmpty(mobile)) {
-            Toast.makeText(this, "mobile不能为空", Toast.LENGTH_SHORT).show();
-            return;
-        }
+//        String title = edt_title.getText().toString().trim();
+//        if (TextUtils.isEmpty(title)) {
+//            Toast.makeText(this, "会员怎么开", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//
+//        String content = edt_content.getText().toString().trim();
+//        if (TextUtils.isEmpty(content)) {
+//            Toast.makeText(this, "请输入内容", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//
+//        String mobile = edt_mobile.getText().toString().trim();
+//        if (TextUtils.isEmpty(mobile)) {
+//            Toast.makeText(this, "mobile不能为空", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+        startActivity(new Intent(this,CreateService5Activity.class));
     }
 
     @Override
